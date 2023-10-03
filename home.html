@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Login Page</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>Home Page</title>
+    <style>
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        header{
+            color: rgb(255, 255, 255);
+            text-align: right;
+            padding: 10px 100px ;
+        }
+        .teammates {
+            background-color: #050a2f;
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 10px 50px;
+            text-align: center;
+            /* text-decoration: none; */
+            display: inline-block;
+            font-size: 16px;
+            margin-right: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 8px 16px 0 rgba(54, 25, 25, 0.2), 0 6px 20px 0 rgba(90, 33, 33, 0.19);
+        }
+
+        .teammate-button:hover {
+        box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24),0 17px 50px 0 rgba(255, 255, 255, 0.19);
+        }
+        .teammates:hover {
+        box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24),0 17px 50px 0 rgba(0, 255, 85, 0.19),0 17px 50px 0 rgba(0, 140, 255, 0.19),0 17px 50px 0 rgba(0, 255, 85, 0.19);
+        }
+        .teammate-button {
+            background-color: #5842ba;
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 20px 50px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin-right: 10px;
+            border-radius: 10px;
+            transition: box-shadow 0.2s;
+            box-shadow: 10px 8px 16px 0 rgba(0, 0, 0, 0.2), 10px 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+            
+        }
+
+        .teammate-button:hover {
+            background-color: #23c962;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            margin-top: 50px;
+        }
+
+        .teammate-names {
+            display: none; /* Initially hide the teammate names */
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class ="headers">
+    <header>
+        <button class="teammates" onclick="toggleTeammateNames()">Team Mate</button>
+        <button class="teammates">About Us</button>
+        <button class="teammates" id="logoutButton">Logout</button>
+
+    </header>
+    </div>
+
+    <h1>Grow Together</h1>
+
+    <div class="teammate-names">
+        <button class="teammate-button">Deepan</button>
+        <button class="teammate-button">Suriya</button>
+        <button class="teammate-button">Prasath</button>
+        <button class="teammate-button">Vinoth</button>
+    </div>
+
+    <script>
+        function toggleTeammateNames() {
+            var teammateNames = document.querySelector(".teammate-names");
+            if (teammateNames.style.display === "none") {
+                teammateNames.style.display = "block";
+            } else {
+                teammateNames.style.display = "none";
+            }
+        }
+        document.getElementById("logoutButton").addEventListener("click", function() {
+            window.location.href="login.html";
+        })
+    </script>
+</body>
+</html>
